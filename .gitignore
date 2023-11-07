@@ -1,0 +1,7 @@
+keyword_spotting/mbed-os
+energyRun-ui/
+keyword_spotting/BUILD
+keyword_spotting/tensorflow
+keyword_spotting/util
+keyword_spotting/third_party
+keyword_spotting/.mbed
