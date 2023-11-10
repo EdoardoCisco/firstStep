@@ -25,6 +25,7 @@ in th_results is copied from the original in EEMBC.
 
 #include "api/internally_implemented.h"
 #include "mbed.h"
+#include "stm32u5xx_hal_tim.h"
 #include "tensorflow/lite/micro/kernels/micro_ops.h"
 #include "tensorflow/lite/micro/micro_error_reporter.h"
 #include "tensorflow/lite/micro/micro_interpreter.h"
@@ -88,7 +89,7 @@ void th_results() {
 
 // Implement this method with the logic to perform one inference cycle.
 void th_infer() { runner->Invoke(); }
-/*
+
 /// \brief optional API.
 void th_final_initialize(void) {
   static tflite::MicroMutableOpResolver<6> resolver;
@@ -103,7 +104,7 @@ void th_final_initialize(void) {
          g_kws_model_data, resolver, tensor_arena, kTensorArenaSize);
   runner = &model_runner;
 }
-*/
+
 void th_pre() {}
 void th_post() {}
 
@@ -122,8 +123,8 @@ char *th_strncpy(char *dest, const char *src, size_t n) {
 }
 
 size_t th_strnlen(const char *str, size_t maxlen) {
-maxlen = strlen(str);
-  return maxlen;
+    if(strlen(str) < maxlen)return strlen(str);
+    else return maxlen;
 }
 
 char *th_strcat(char *dest, const char *src) { return strcat(dest, src); }
@@ -177,6 +178,7 @@ void th_timestamp(void) {
 void th_timestamp_initialize(void) {
   /* USER CODE 1 BEGIN */
   // Setting up BOTH perf and energy here
+//   us_ticker_init();
   /* USER CODE 1 END */
   /* This message must NOT be changed. */
   th_printf(EE_MSG_TIMESTAMP_MODE);

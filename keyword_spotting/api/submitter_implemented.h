@@ -20,6 +20,7 @@ methods from th_libc.h and all testharness methods from th_lib.h are here.
 /// in order for the benchmark to output useful results, but some auxiliary
 /// methods default to an empty implementation. These methods are provided to
 /// enable submitter optimizations, and are not required for submission.
+#include "internally_implemented.h"
 
 #ifndef MLPERF_TINY_V0_1_API_SUBMITTER_IMPLEMENTED_H_
 #define MLPERF_TINY_V0_1_API_SUBMITTER_IMPLEMENTED_H_
@@ -28,7 +29,7 @@ methods from th_libc.h and all testharness methods from th_lib.h are here.
 /// \detail This API is designed for performance evaluation only. In order to
 /// gather energy measurments we recommend using the EEMBC test suite.
 #define EE_MSG_TIMESTAMP "m-lap-us-%lu\r\n"
-#define TH_VENDOR_NAME_STRING "unspecified"
+#define TH_VENDOR_NAME_STRING "STMicroelectronics"
 
 #define MAX_DB_INPUT_SIZE (49 * 10 * 1)
 #define TH_MODEL_VERSION EE_MODEL_VERSION_KWS01
@@ -62,7 +63,7 @@ char th_getchar();
 /// \brief optional API
 void th_serialport_initialize(void);
 void th_timestamp_initialize(void);
-// void th_final_initialize(void);
+void th_final_initialize(void);
 void th_pre();
 void th_post();
 void th_command_ready(char volatile *msg);

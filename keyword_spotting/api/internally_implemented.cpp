@@ -96,12 +96,14 @@ void ee_serial_command_parser_callback(char *p_command) {
 void ee_benchmark_initialize(void) {
   th_serialport_initialize();
   th_timestamp_initialize();
-  //th_final_initialize();
+  th_final_initialize();
+  
   th_printf(EE_MSG_INIT_DONE);
   // Enable the command parser here (the callback is connected)
   g_state_parser_enabled = true;
   // At this point, the serial monitor should be up and running,
   th_printf(EE_MSG_READY);
+  th_timestamp();
 }
 
 arg_claimed_t ee_profile_parse(char *command) {
