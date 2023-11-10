@@ -10,4 +10,4 @@ get_dataset.py
 keras_model.py
 kws_util.py
 make_bin_files.py
-.vscode
+.vscode/
