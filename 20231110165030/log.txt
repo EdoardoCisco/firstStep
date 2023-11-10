@@ -1,0 +1,135 @@
+00171.031 session: m-session-start-id[20231110165030]
+00171.032 parser: m-bmark-run-name[ML Performance 1.0.1]-code[ulp-mlperf]
+00171.036 sequencer: m-sequencer-start
+00171.036 sequencer: m-sequencing-i[1]-command[version]-ack[/parser: m-ready/]-ms[5000]-acc[0]-total_ms[59200]
+00171.036 parser: Command "version"
+00171.036 parser: m-version[3.0.10]
+00171.037 parser: m-ready-finished[version]
+00171.037 sequencer: m-sequencing-i[2]-command[bm cfg ulp-mlperf]-ack[/parser: m-ready/]-ms[5000]-acc[5000]-total_ms[59200]
+00171.037 parser: Command "bm cfg ulp-mlperf"
+00171.540 parser: m-bm-cfg-name[ulp-mlperf]-key[iterWarmup]-val[10]
+00171.540 parser: m-bm-cfg-name[ulp-mlperf]-key[iterInfer]-val[1000]
+00171.540 parser: m-bm-cfg-name[ulp-mlperf]-key[runMode]-val[bmark]
+00171.540 parser: m-bm-cfg-name[ulp-mlperf]-key[model]-val[kws01]
+00171.540 parser: m-bm-cfg-name[ulp-mlperf]-key[sourceDir]-val[/home/edo/eembc/runner/benchmarks/ulp-mlperf/datasets]
+00171.540 parser: m-bm-cfg-name[ulp-mlperf]-key[singleInputFn]-val[tst_000000_Stop_7.bin]
+00171.540 parser: m-ready-finished[bm]
+00171.541 sequencer: m-sequencing-i[3]-command[dut profile]-ack[/dut: m-ready/]-ms[5000]-acc[10000]-total_ms[59200]
+00171.541 parser: Command "dut profile"
+00171.541 parser: m-ready-finished[dut]
+00171.546 dut: m-profile-[ULPMark for tinyML Firmware V0.0.1]
+00171.548 dut: m-model-[kws01]
+00171.548 dut: m-ready
+00171.549 sequencer: m-sequencing-i[4]-command[dut timestamp]-ack[/dut: m-ready/]-ms[5000]-acc[15000]-total_ms[59200]
+00171.549 parser: Command "dut timestamp"
+00171.549 parser: m-ready-finished[dut]
+00171.552 dut: m-lap-us-556628342
+00171.552 dut: m-ready
+00171.552 sequencer: m-sequencing-i[5]-command[bload dut "/home/edo/eembc/runner/benchmarks/ulp-mlperf/datasets/kws01/tst_000000_Stop_7.bin"]-ack[/parser: m-ready/]-ms[7840]-acc[20000]-total_ms[59200]
+00171.552 parser: Command "bload dut "/home/edo/eembc/runner/benchmarks/ulp-mlperf/datasets/kws01/tst_000000_Stop_7.bin""
+00171.553 parser: File size is 490, loading...
+00171.553 parser: Starting at byte offset 0
+00171.553 parser: Sending 490 bytes
+00171.553 parser: m-mute-target[dut]
+00171.681 parser: m-unmute-target[dut]
+00171.682 parser: Binary load took 0.129 sec, or 3.808 kB/sec
+00171.682 parser: m-bload-done
+00171.682 parser: m-ready-finished[bload]
+00171.682 sequencer: m-sequencing-i[6]-command[dut infer 1000 10]-ack[/dut.?: m-ready/]-ms[-1]-acc[27840]-total_ms[59200]
+00171.682 parser: Command "dut infer 1000 10"
+00171.682 parser: m-ready-finished[dut]
+00171.686 dut: m-warmup-start-10
+00172.411 dut: m-warmup-done
+00172.413 dut: m-infer-start-1000
+00172.414 dut: m-lap-us-557498369
+00244.864 dut: m-lap-us-630557747
+00244.865 dut: m-infer-done
+00244.872 dut: m-results-[0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.996]
+00244.873 dut: m-ready
+00244.873 sequencer: m-sequencing-i[7]-command[bload dut "/home/edo/eembc/runner/benchmarks/ulp-mlperf/datasets/kws01/tst_000001_Left_2.bin"]-ack[/parser: m-ready/]-ms[7840]-acc[27839]-total_ms[59200]
+00244.873 parser: Command "bload dut "/home/edo/eembc/runner/benchmarks/ulp-mlperf/datasets/kws01/tst_000001_Left_2.bin""
+00244.873 parser: File size is 490, loading...
+00244.873 parser: Starting at byte offset 0
+00244.873 parser: Sending 490 bytes
+00244.873 parser: m-mute-target[dut]
+00244.999 parser: m-unmute-target[dut]
+00244.999 parser: Binary load took 0.125 sec, or 3.905 kB/sec
+00244.999 parser: m-bload-done
+00244.999 parser: m-ready-finished[bload]
+00244.999 sequencer: m-sequencing-i[8]-command[dut infer 1000 10]-ack[/dut.?: m-ready/]-ms[-1]-acc[35679]-total_ms[59200]
+00244.999 parser: Command "dut infer 1000 10"
+00244.999 parser: m-ready-finished[dut]
+00245.003 dut: m-warmup-start-10
+00245.729 dut: m-warmup-done
+00245.732 dut: m-infer-start-1000
+00245.732 dut: m-lap-us-631433355
+00318.178 dut: m-lap-us-704492736
+00318.179 dut: m-infer-done
+00318.186 dut: m-results-[0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.996]
+00318.186 dut: m-ready
+00318.186 sequencer: m-sequencing-i[9]-command[bload dut "/home/edo/eembc/runner/benchmarks/ulp-mlperf/datasets/kws01/tst_000002_Right_6.bin"]-ack[/parser: m-ready/]-ms[7840]-acc[35678]-total_ms[59200]
+00318.187 parser: Command "bload dut "/home/edo/eembc/runner/benchmarks/ulp-mlperf/datasets/kws01/tst_000002_Right_6.bin""
+00318.187 parser: File size is 490, loading...
+00318.187 parser: Starting at byte offset 0
+00318.187 parser: Sending 490 bytes
+00318.187 parser: m-mute-target[dut]
+00318.310 parser: m-unmute-target[dut]
+00318.311 parser: Binary load took 0.124 sec, or 3.960 kB/sec
+00318.311 parser: m-bload-done
+00318.311 parser: m-ready-finished[bload]
+00318.311 sequencer: m-sequencing-i[10]-command[dut infer 1000 10]-ack[/dut.?: m-ready/]-ms[-1]-acc[43518]-total_ms[59200]
+00318.311 parser: Command "dut infer 1000 10"
+00318.311 parser: m-ready-finished[dut]
+00318.314 dut: m-warmup-start-10
+00319.040 dut: m-warmup-done
+00319.042 dut: m-infer-start-1000
+00319.043 dut: m-lap-us-705366139
+00391.491 dut: m-lap-us-778425548
+00391.492 dut: m-infer-done
+00391.499 dut: m-results-[0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.996]
+00391.500 dut: m-ready
+00391.500 sequencer: m-sequencing-i[11]-command[bload dut "/home/edo/eembc/runner/benchmarks/ulp-mlperf/datasets/kws01/tst_000003_Up_8.bin"]-ack[/parser: m-ready/]-ms[7840]-acc[43517]-total_ms[59200]
+00391.500 parser: Command "bload dut "/home/edo/eembc/runner/benchmarks/ulp-mlperf/datasets/kws01/tst_000003_Up_8.bin""
+00391.500 parser: File size is 490, loading...
+00391.500 parser: Starting at byte offset 0
+00391.500 parser: Sending 490 bytes
+00391.500 parser: m-mute-target[dut]
+00391.623 parser: m-unmute-target[dut]
+00391.623 parser: Binary load took 0.123 sec, or 3.991 kB/sec
+00391.623 parser: m-bload-done
+00391.623 parser: m-ready-finished[bload]
+00391.623 sequencer: m-sequencing-i[12]-command[dut infer 1000 10]-ack[/dut.?: m-ready/]-ms[-1]-acc[51357]-total_ms[59200]
+00391.623 parser: Command "dut infer 1000 10"
+00391.624 parser: m-ready-finished[dut]
+00391.627 dut: m-warmup-start-10
+00392.353 dut: m-warmup-done
+00392.354 dut: m-infer-start-1000
+00392.356 dut: m-lap-us-779298263
+00464.812 dut: m-lap-us-852357535
+00464.813 dut: m-infer-done
+00464.820 dut: m-results-[0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.996]
+00464.821 dut: m-ready
+00464.821 sequencer: m-sequencing-i[13]-command[bload dut "/home/edo/eembc/runner/benchmarks/ulp-mlperf/datasets/kws01/tst_000004_On_5.bin"]-ack[/parser: m-ready/]-ms[7840]-acc[51356]-total_ms[59200]
+00464.821 parser: Command "bload dut "/home/edo/eembc/runner/benchmarks/ulp-mlperf/datasets/kws01/tst_000004_On_5.bin""
+00464.821 parser: File size is 490, loading...
+00464.821 parser: Starting at byte offset 0
+00464.821 parser: Sending 490 bytes
+00464.821 parser: m-mute-target[dut]
+00464.941 parser: m-unmute-target[dut]
+00464.941 parser: Binary load took 0.120 sec, or 4.096 kB/sec
+00464.941 parser: m-bload-done
+00464.941 parser: m-ready-finished[bload]
+00464.941 sequencer: m-sequencing-i[14]-command[dut infer 1000 10]-ack[/dut.?: m-ready/]-ms[-1]-acc[59196]-total_ms[59200]
+00464.941 parser: Command "dut infer 1000 10"
+00464.942 parser: m-ready-finished[dut]
+00464.945 dut: m-warmup-start-10
+00465.671 dut: m-warmup-done
+00465.672 dut: m-infer-start-1000
+00465.674 dut: m-lap-us-853226789
+00538.128 dut: m-lap-us-926286219
+00538.130 dut: m-infer-done
+00538.137 dut: m-results-[0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.996]
+00538.137 dut: m-ready
+00538.138 sequencer: m-sequencer-stop
+00538.138 session: m-session-stop-id[20231110165030]
+00538.138 session: Saved this run to session ID 20231110165030
